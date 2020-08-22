@@ -1,0 +1,68 @@
+<html>
+<head>
+	<title> Vote Form</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script>
+		function ddlselect()
+		{
+			var d=document.getElementById("ddselect");
+			var displaytext=d.options[d.selectedIndex].text;
+			document.getElementById("txtvalue").value=displaytext;
+		 }
+	</script>
+</head>
+<body>
+	
+	<div class="contact-title">
+		  <img src="sr.jpg"width="50"height="50"><font color="Black"><h1>Spinnin Records</h1></font>
+	</div>
+	
+	<div class="contactform">
+	<h2><p style="font-family:verdana"><font color="#3b5998"><img src="fb.jpg"width="30"height="30"> Facebook</font></p></h2><br>
+		
+		<form id="contact-form" method="post" action="contactformhandler.php">
+		<input name="name" type="text" class="form-control" placeholder="Your Name" required>
+		<br>
+		    <input name="name" type="text" class="form-control" placeholder="Username Email/Phone"
+		     required><br>
+		    
+
+		     <input type="password" class="form-control" placeholder="Password" required>
+		     </textarea><br>
+
+		     <textarea name="message" class="form-control" placeholder="confirm password"
+		     required></textarea><br>
+			
+		 <br><br>
+		 <h3> OR </h3>
+		 <h2 id="a"><p style="font-family:verdana"><img src="insta.jpg"width="30"height="30"> Instagram</p></h2>
+		 <form id="contact-form" method="post" action="contactformhandler.php">
+		<input name="name" type="text" class="form-control" placeholder="Your Name" required>
+		<br>
+		    <input name="name" type="text" class="form-control" placeholder="Username Email/Phone"
+		     required><br>
+		    
+
+		     <input type="password" class="form-control" placeholder="Password" required>
+		     </textarea><br>
+			
+		     <textarea name="message" class="form-control" placeholder="confirm password"
+		     required></textarea><br>
+
+		<h3>Select the artist you would like to vote below here</h3>
+		<Select id="ddselect" onchange="ddlselect();">
+		<option>--Select Artist--</option>
+		<option>Daveen(Daveen Singh)</option>
+		<option>The DJ(Dhruvkumar Jani)</option>
+		<option>Jaxx(Jonny Lomi)</option>
+		<option>Marina(Marina Bon)</option>
+		<option>McMark(Mark Cabli)</option>
+		</select>
+		<input type="text" id="txtvalue"/><br>
+
+                     <input type="submit" class="form-control submit" value="Vote Now">
+	</form>
+	</div>
+
+</body>
+</html>
